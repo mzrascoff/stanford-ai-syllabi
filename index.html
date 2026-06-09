@@ -49,7 +49,7 @@ footer{padding:30px 0 60px;color:var(--mut);font-size:12.3px;text-align:center}
 <section id="spectrum"><div class="wrap">
 <h2>Of the courses that mention AI, most restrict or ban it</h2>
 <p class="lead">Only <b id="aishare"></b> of analyzed syllabi say anything about student AI use. Here is how those <span id="aitot"></span> break down — from most permissive (left) to most restrictive (right). Click a band to see real examples.</p>
-<div class="spectrum" id="spectrum"></div>
+<div class="spectrum" id="specbar"></div>
 <div class="spectrum-ends"><span>← More permissive</span><span>More restrictive →</span></div>
 <div id="exbox" style="margin-top:16px"></div>
 </div></section>
@@ -86,7 +86,7 @@ document.getElementById('kpis').innerHTML=kpis.map(k=>`<div class="kpi"><div cla
 document.getElementById('aishare').textContent=Math.round(aiTot/man.analyzed*100)+'%';
 document.getElementById('aitot').textContent=aiTot+' syllabi';
 document.getElementById('explead').textContent=`Search and filter all ${man.analyzed} analyzed syllabi. Each row shows the AI-policy classification and the exact wording it was based on.`;
-const sp=document.getElementById('spectrum');
+const sp=document.getElementById('specbar');
 sp.innerHTML=SPEC.map(t=>{const n=tc[t]||0;return `<div class="seg" data-t="${t}" style="flex:${n};background:${COL[t]}" title="${SHORT[t]}"><b>${n}</b><span>${SHORT[t]}<br>${(n/aiTot*100).toFixed(0)}%</span></div>`}).join('');
 function showEx(t){const box=document.getElementById('exbox');const ex=(D.examples[t]||[]);
  box.innerHTML=`<div class="panel"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap"><span class="tier" style="background:${COL[t]}">${SHORT[t]}</span><b>${tc[t]} syllabi · ${(tc[t]/aiTot*100).toFixed(0)}% of those addressing AI</b><span style="flex:1"></span><a href="#explore" onclick="filterTier('${t.replace(/'/g,"\\'")}')" style="font-size:12.5px;color:var(--card1)">See all in table ↓</a></div>`+
