@@ -1,8 +1,8 @@
-# How Stanford Courses Handle AI — Spring 2026
+# How Stanford Courses Handle AI — 2025–26
 
-An interactive dashboard analyzing how Stanford University course syllabi address student use of AI / generative-AI tools in Spring 2026.
+An interactive dashboard analyzing how Stanford University course syllabi address student use of AI / generative-AI tools across the 2025–26 academic year (Fall 2025, Winter 2026, Spring 2026).
 
-**Live site:** _(GitHub Pages URL will appear here once Pages is enabled)_
+**Live site:** https://mzrascoff.github.io/stanford-ai-syllabi/
 
 ## What's inside
 - `index.html` — the self-contained interactive dashboard (open it directly or via the live site). Charts via Chart.js (CDN); all data embedded.
@@ -12,7 +12,7 @@ An interactive dashboard analyzing how Stanford University course syllabi addres
 Syllabi were collected from Stanford's central Syllabus tool plus instructor-published Google Docs. Each syllabus with readable text was scanned for AI references and classified into five patterns — Prohibited, Restricted/conditional, Allowed with disclosure, Encouraged, or "mentions AI with no clear rule" — by language model, then spot-checked against the source wording.
 
 ## Headline finding
-Of ~1,313 analyzed syllabi across ~151 departments, only ~35% mention student AI use at all. Among those that do, the majority **ban or conditionally restrict** it; only a handful actively **encourage** it.
+Across three quarters, **3,353 readable syllabi** were analyzed (Fall 956, Winter 1,084, Spring 1,313). Engagement with AI grew over the year (361 → 376 → 457 syllabi addressing it), but most policies still **ban or conditionally restrict** AI; active **encouragement** stayed rare and slipped each quarter (5% → 4% → 3%).
 
 ## Caveats
 Classifications are automated and approximate, and reflect syllabus text only — not how instructors apply policies in practice. Syllabi posted as restricted links or images are excluded. Not affiliated with or endorsed by Stanford University.
